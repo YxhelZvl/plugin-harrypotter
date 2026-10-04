@@ -1,0 +1,27 @@
+{
+  "id": "harrypotter-yxhelzvl",
+  "name": "Harry Potter Saga",
+  "description": "Las 8 películas de la saga en alta calidad, listas para reproducir.",
+  "version": "1.0.0",
+  "apiVersion": 4,
+  "entry": "plugin.js",
+  "icon": "icon.png",
+  "hosts": [
+    "raw.githubusercontent.com",
+    "image.tmdb.org",
+    "yadi.sk",
+    "disk.yandex.ru",
+    "storage.yandex.net",
+    "*.storage.yandex.net",
+    "downloader.disk.yandex.ru"
+  ],
+  "streamHosts": "any",
+  "capabilities": [
+    "search",
+    "home",
+    "resolve"
+  ],
+  "secrets": {
+    "hpKey": "kino-sealed:v1:n4L-8MJmIdQEljyuGbpKtTZfJ7NSR0yZT4SFK_rYtilmEYFR5DSn71TpQ1YcCYkKIqavGANIPovrpL-pd13ekw3rYbbUk7bwPwRU8Z4km9Yg74rccDfhuYWLFkcCxPWxRH45RhUV7s73Eefj5KlrDBvj_flditEaWIvbfw"
+  }
+}
