@@ -2,7 +2,7 @@
   "id": "harrypotter-yxhelzvl",
   "name": "Harry Potter Saga",
   "description": "Las 8 películas de la saga en alta calidad, listas para reproducir.",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "apiVersion": 4,
   "entry": "plugin.js",
   "icon": "icon.png",

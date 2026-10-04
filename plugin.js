@@ -101,7 +101,7 @@ async function resolverYandex(url) {
         headers: {
             "Content-Type": "text/plain",
             "Accept": "application/json",
-            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:157.0) Gecko/20100101 Firefox/157.0"
+            "User-Agent": "Mozilla/5.0 (Linux; Android 5.0.2; SM-G920F Build/LRX22G; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/46.0.2490.76 Mobile Safari/537.36"
         },
         body: JSON.stringify(payload),
         timeoutMs: 15000
