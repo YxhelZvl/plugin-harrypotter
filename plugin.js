@@ -55,7 +55,7 @@ async function resolverYandex(url) {
         headers: {
             "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:157.0) Gecko/20100101 Firefox/157.0"
         },
-        timeoutMs: 30000
+        timeoutMs: 15000
     });
     if (!r.ok) throw new Error("No se pudo acceder a la página de Yandex (Status: " + r.status + ")");
     console.log("[HP-PLUGIN] ✅ HTML obtenido correctamente.");
@@ -98,7 +98,11 @@ async function resolverYandex(url) {
     const payload = { hash: fileHash, sk: sk };
     const postRes = await kino.fetch("https://disk.yandex.ru/public/api/download-url", {
         method: "POST",
-        headers: { "Content-Type": "text/plain" },
+        headers: {
+            "Content-Type": "text/plain",
+            "Accept": "application/json",
+            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:157.0) Gecko/20100101 Firefox/157.0"
+        },
         body: JSON.stringify(payload),
         timeoutMs: 15000
     });
@@ -115,7 +119,7 @@ async function resolverYandex(url) {
     console.log("[HP-PLUGIN] 🔄 Paso 6: Resolviendo redirección final (método HEAD)...");
     const redirectRes = await kino.fetch(downloadUrl, {
         method: "HEAD",
-        timeoutMs: 30000
+        timeoutMs: 15000
     });
 
     if (!redirectRes.ok) {
