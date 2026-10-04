@@ -100,7 +100,7 @@ async function resolverYandex(url) {
         method: "POST",
         headers: { "Content-Type": "text/plain" },
         body: JSON.stringify(payload),
-        timeoutMs: 30000
+        timeoutMs: 15000
     });
 
     if (!postRes.ok) throw new Error("Error en la petición a la API de Yandex (Status: " + postRes.status + ")");
